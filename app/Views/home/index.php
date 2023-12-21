@@ -60,7 +60,7 @@
                                         <img src="<?= base_url('assets/black.jpg') ?>" class="card-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <div class="more"><a href="/streaming/Black_Butler">Click here</a></div>
+                                            <div class="more"><a href="/streaming/Black_Butler">Black Butler</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                             alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <div class="more"><a href="#">Click here</a></div>
+                                            <div class="more"><a href="#">Gintaman</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                         <img src="<?= base_url('assets/akira1.jpg') ?>" class="card-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <div class="more"><a href="/streaming/Akira">Click here</a></div>
+                                            <div class="more"><a href="/streaming/Akira">Akira</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -141,10 +141,11 @@
                 <br>
                 <div class="col">
                     <div class="card">
-                        <img src="<?= base_url('assets/black.jpg') ?>" class="card-img-top" alt="...">
+                        <a href="/streaming/Black_Butler"><img src="<?= base_url('assets/black.jpg') ?>"
+                                class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <div class="more"><a href="#"></a></div>
+                            <div class="more"><a href=""></a></div>
                         </div>
                     </div>
                 </div>
