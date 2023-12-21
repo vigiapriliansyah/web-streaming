@@ -86,6 +86,10 @@ section {
   padding-left: 10px;
 }
 
+.more a {
+  text-decoration: none;
+}
+
 /* --footer-- */
 footer {
   position: fixed;
