@@ -14,7 +14,7 @@
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="<?= base_url('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'); ?>">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?= base_url('assets/dist/css/adminlte.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/adminLteDist/css/adminlte.min.css'); ?>">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="<?= base_url('plugins/overlayScrollbars/css/OverlayScrollbars.min.css'); ?>">
     <!-- Daterange picker -->
@@ -92,7 +92,7 @@
     <!-- overlayScrollbars -->
     <script src="<?= base_url('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'); ?>"></script>
     <!-- AdminLTE App -->
-    <script src="<?= base_url('assets/dist/js/adminlte.js'); ?>"></script>
+    <script src="<?= base_url('assets/adminLteDist/js/adminlte.js'); ?>"></script>
     <!-- table -->
     <script src="<?= base_url('plugins/datatables/jquery.dataTables.min.js'); ?>"></script>
     <script src="<?= base_url('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js'); ?>"></script>
