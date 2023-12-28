@@ -5,7 +5,7 @@
 <!-- <div class="preloader flex-column justify-content-center align-items-center">
   <img class="animation__wobble" src="<?= base_url('assets/dist/img/AdminLTELogo.png'); ?>" alt="AdminLTELogo" height="60" width="60">
 </div> -->
-<!-- sidebar -->
+
 <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
