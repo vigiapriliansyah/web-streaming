@@ -42,26 +42,35 @@ class Anime extends BaseController
             'judul' => 'required|is_unique[tbl_anime.judul]',
             'deskripsi' => 'required',
             'genre' => 'required',
-            'rating' => 'required|numeric',
+            'rating' => 'required',
             'tahun' => 'required|numeric',
         ];
 
         if (!$this->validate($validationRules)) {
             return redirect()->to('anime/tambah_anime')->with('errors', "Note : Jangan ada data yang sama atau kosong");
         }
-        $fileVideo->move('uploud/video');
-        $fileGambar->move('uploud/images');
 
-
-        $this->animeModel->save([
+        $data = [
             'judul' => $this->request->getVar('judul'),
             'deskripsi' => $this->request->getVar('deskripsi'),
             'genre' => $this->request->getVar('genre'),
             'rating' => $this->request->getVar('rating'),
             'tahun' => $this->request->getVar('tahun'),
-            'file_video' => $fileVideo->getName(),
-            'file_gambar' => $fileGambar->getName()
-        ]);
+        ];
+
+        // Check if file video is provided
+        if ($fileVideo->isValid()) {
+            $fileVideo->move('uploud/video');
+            $data['file_video'] = $fileVideo->getName();
+        }
+
+        // Check if file gambar is provided
+        if ($fileGambar->isValid()) {
+            $fileGambar->move('uploud/images');
+            $data['file_gambar'] = $fileGambar->getName();
+        }
+
+        $this->animeModel->save($data);
 
         return redirect()->to('anime')->with('success', "Berhasil Menguploud Data");
     }
