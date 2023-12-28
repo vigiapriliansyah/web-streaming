@@ -65,8 +65,9 @@ body {
 }
 
 /* --slider-- */
-section {
-  margin-top: 7rem;
+/* --slider-- */
+section .swiper {
+  margin-top: 1rem;
   margin-bottom: 6rem;
 }
 
@@ -82,29 +83,28 @@ section {
 
 /* --section-- */
 
-.col-sm-8 span {
-  padding-left: 10px;
+.col-sm-8 h3 {
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
+.col-sm-4 h3 {
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.col-sm-4 .card {
+  margin-left: 60px;
+  width: 251px;
+}
+.col-sm-4 img {
+  width: 250px;
+}
 .more a {
   text-decoration: none;
 }
 
 /* --footer-- */
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-@media (max-height: 800px) {
-  footer {
-    position: static;
-  }
-
-  header {
-    padding-top: 40px;
-  }
-}
 
 .footer-distributed {
   background-color: #302c5b;
@@ -252,7 +252,11 @@ footer {
   margin-bottom: 5px;
 }
 
-@media (max-width: 880px) {
+@media (min-width: 320px) and (max-width: 480px) {
+  
+}
+
+@media (max-width: 600px) {
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
@@ -268,7 +272,7 @@ footer {
 }
 
 section {
-  margin-top: 6rem;
+  margin-top: 3rem;
   color: #fff;
   display: flex;
 }
@@ -349,18 +353,42 @@ section .recomen h2 {
   float: left;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 320px) and (max-width: 480px) {
+  /* section */
   section {
     flex-direction: column;
     align-items: center;
   }
 
+  .col-sm-8 h3 {
+    font-size: 15px;
+  }
+  .col-sm-4 {
+    display: none;
+  }
+
+  .container .col .card {
+    margin-left: 30px;
+    width: 250px;
+  }
+  .container .col .card img {
+    width: 100%;
+    width: 250px;
+  }
   .center {
     width: 100%;
+  }
+
+  .swiper {
+    width: 100%;
+    width: 375px;
   }
 
   .recomen {
     margin: 15px 0;
     display: none;
   }
+}
+
+@media (max-width: 600px) {
 }
