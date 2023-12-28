@@ -36,8 +36,8 @@
 <main>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                <span>|Recently Added</span>
+            <div class="col-sm-8 gap">
+                <h3>|Recently Added</h3>
                 <div class="container text-center">
                     <div class="row">
                         <div class="col">
@@ -121,13 +121,49 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="<?= base_url('assets/akira1.jpg') ?>" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <div class="more"><a href="/streaming/Akira">Akira</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="<?= base_url('assets/akira1.jpg') ?>" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <div class="more"><a href="/streaming/Akira">Akira</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="<?= base_url('assets/akira1.jpg') ?>" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <div class="more"><a href="/streaming/Akira">Akira</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="<?= base_url('assets/akira1.jpg') ?>" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <div class="more"><a href="/streaming/Akira">Akira</a></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <span>|Anime Tahun Ini</span>
+                <h3>|Anime Tahun Ini</h3>
                 <div class="col">
                     <div class="card">
                         <img src="<?= base_url('assets/MV5BOGNjNzFhMGQtODc2MS00OGU0LThkN2UtODY1NmJmYWY0NmFiXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_.jpg') ?>"
@@ -153,8 +189,5 @@
         </div>
     </div>
 </main>
-<!-- --footer-- -->
-<div class="container">
 
-</div>
 <?= $this->endSection(); ?>
