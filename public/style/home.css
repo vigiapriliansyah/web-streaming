@@ -67,7 +67,7 @@ body {
 /* --slider-- */
 /* --slider-- */
 section .swiper {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 6rem;
 }
 
@@ -272,7 +272,7 @@ section .swiper {
 }
 
 section {
-  margin-top: 6rem;
+  margin-top: 5rem;
   color: #fff;
   display: flex;
 }
