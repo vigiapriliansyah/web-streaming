@@ -2,29 +2,28 @@
 
 namespace App\Controllers;
 
+use App\Models\animeModel;
+use App\Models\detailGenreModel;
+use App\Models\genreModel;
+
 class Streaming extends BaseController
 {
-    public function Black_Butler()
+
+    protected $animeModel;
+    protected $genreModel;
+    protected $detailGenreModel;
+    public function __construct()
+    {
+        $this->animeModel = new animeModel();
+        $this->genreModel = new genreModel();
+        $this->detailGenreModel = new detailGenreModel();
+    }
+
+    public function index()
     {
         $data = [
             'title' => 'streaming | 5nime'
         ];
-        return view('streaming/Black_Butler', $data);
-    }
-
-    public function Akira()
-    {
-        $data = [
-            'title' => 'streaming | 5nime',
-        ];
-        return view('streaming/Akira');
-    }
-
-    public function Gintaman()
-    {
-        $data = [
-            'title' => 'streaming | 5nime',
-        ];
-        return view('streaming/Gintaman');
+        return view('streaming', $data);
     }
 }

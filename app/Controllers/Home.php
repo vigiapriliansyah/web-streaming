@@ -18,11 +18,6 @@ class Home extends BaseController
         $this->detailGenreModel = new detailGenreModel();
     }
 
-    /* SELECT tg.genre as genre,ta.judul AS judul FROM `tbl_genre`AS tg
-INNER JOIN detail_genre AS dg ON
-tg.id_genre=dg.id_genre
-INNER JOIN tbl_anime AS ta ON
-ta.id_anime=dg.id_anime */
     public function index()
     {
         $data = [
@@ -72,13 +67,5 @@ ta.id_anime=dg.id_anime */
             'title' => 'Contact | 5nime'
         ];
         return view('/home/contact', $data);
-    }
-
-    public function streaming()
-    {
-        $data = [
-            'title' => 'streaming | 5nime'
-        ];
-        return view('/home/Black_Butler', $data);
     }
 }
