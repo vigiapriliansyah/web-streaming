@@ -79,7 +79,9 @@
                             <script>
                                 $(document).ready(function() {
                                     // Inisialisasi Select2 pada elemen dengan class "select2"
-                                    $('.select2').select2();
+                                    $('.select2').select2({
+                                        placeholder: "Genre..."
+                                    });
                                 });
                             </script>
                         </div>
