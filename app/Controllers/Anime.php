@@ -3,31 +3,49 @@
 namespace App\Controllers;
 
 use App\Models\animeModel;
+use App\Models\genreModel;
+use App\Models\detailGenreModel;
 
 class Anime extends BaseController
 {
     protected $animeModel;
+    protected $genreModel;
+    protected $detailGenreModel;
     public function __construct()
     {
         $this->animeModel = new animeModel();
+        $this->genreModel = new genreModel();
+        $this->detailGenreModel = new detailGenreModel();
     }
 
     public function index()
     {
-        $anime = $this->animeModel->findAll();
+        $builder = $this->animeModel->db->table('tbl_anime a');
+        $builder->select('a.id_anime, a.judul, a.deskripsi, a.rating, a.tahun, GROUP_CONCAT(g.genre) AS genres, a.file_video, a.file_gambar');
+        $builder->join('detail_genre d', 'a.id_anime = d.id_anime');
+        $builder->join('tbl_genre g', 'd.id_genre = g.id_genre');
+        $builder->groupBy('a.id_anime');
+
+        $result = $builder->get()->getResult();
+
         $data = [
             'title' => 'Home | 5nime',
-            'anime' => $anime
+            'anime' => $result,
+            // Add other data as needed
         ];
+
+
 
         echo view('dashboard/index', $data);
     }
 
     public function tambah_anime()
     {
+        $genre = $this->genreModel->findAll();
         $data = [
             'title' => 'Tambah | Dashboard',
-            'validation' => \Config\Services::validation()
+            'validation' => \Config\Services::validation(),
+            'genre' => $genre
         ];
         echo view('dashboard/tambah_anime', $data);
     }
@@ -53,7 +71,6 @@ class Anime extends BaseController
         $data = [
             'judul' => $this->request->getVar('judul'),
             'deskripsi' => $this->request->getVar('deskripsi'),
-            'genre' => $this->request->getVar('genre'),
             'rating' => $this->request->getVar('rating'),
             'tahun' => $this->request->getVar('tahun'),
         ];
@@ -70,7 +87,17 @@ class Anime extends BaseController
             $data['file_gambar'] = $fileGambar->getName();
         }
 
-        $this->animeModel->save($data);
+        $lastInsertID = $this->animeModel->insert($data);
+
+        $genre = $this->request->getVar('genre');
+
+        foreach ($genre as $dataGenre) {
+            $additionalData = [
+                'id_anime' => $lastInsertID,
+                'id_genre' => $dataGenre
+            ];
+            $this->detailGenreModel->save($additionalData);
+        }
 
         return redirect()->to('anime')->with('success', "Berhasil Menguploud Data");
     }

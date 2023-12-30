@@ -9,7 +9,7 @@ class animeModel extends Model
     protected $table = 'tbl_anime';
     protected $useTimestamps = true;
     protected $primaryKey = 'id_anime';
-    protected $allowedFields =  ['judul', 'deskripsi', 'genre', 'rating', 'tahun', 'file_video', 'file_gambar'];
+    protected $allowedFields =  ['judul', 'deskripsi', 'rating', 'tahun', 'file_video', 'file_gambar'];
     public function data_anime($id_anime)
     {
         return $this->find($id_anime);

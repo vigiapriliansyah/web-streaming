@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Models\animeModel;
+use App\Models\detailGenreModel;
+use App\Models\genreModel;
+
 class Home extends BaseController
 {
 

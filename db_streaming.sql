@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 11 Des 2023 pada 14.43
+-- Waktu pembuatan: 30 Des 2023 pada 06.07
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -116,7 +116,24 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (27, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-10 01:07:52', 1),
 (28, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-10 09:18:50', 1),
 (29, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-10 12:39:38', 1),
-(30, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-11 14:06:18', 1);
+(30, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-11 14:06:18', 1),
+(31, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-13 02:13:15', 1),
+(32, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-13 13:44:35', 1),
+(33, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-13 13:48:19', 1),
+(34, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-13 14:52:46', 1),
+(35, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-14 07:36:45', 1),
+(36, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-21 06:57:32', 1),
+(37, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-21 06:58:57', 1),
+(38, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-21 07:33:57', 1),
+(39, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-21 12:11:52', 1),
+(40, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-26 10:19:58', 1),
+(41, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-28 04:31:13', 1),
+(42, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-28 06:57:48', 1),
+(43, '::1', 'testing', NULL, '2023-12-28 07:06:21', 0),
+(44, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-28 07:06:41', 1),
+(45, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-28 07:09:36', 1),
+(46, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-28 07:14:30', 1),
+(47, '::1', 'kuroaprilian73@gmail.com', 9, '2023-12-30 04:06:07', 1);
 
 -- --------------------------------------------------------
 
@@ -161,7 +178,13 @@ INSERT INTO `auth_reset_attempts` (`id`, `email`, `ip_address`, `user_agent`, `t
 (9, '', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '', '2023-12-07 00:49:56'),
 (10, '', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '', '2023-12-07 00:50:09'),
 (11, '', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '', '2023-12-07 00:50:36'),
-(12, '', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '', '2023-12-07 00:51:02');
+(12, '', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '', '2023-12-07 00:51:02'),
+(13, 'kuroaprilian73@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', ' 8bf8695aa28a595a110df3621592341b', '2023-12-28 07:07:53'),
+(14, 'kuroaprilian73@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', ' 8bf8695aa28a595a110df3621592341b', '2023-12-28 07:08:02'),
+(15, 'kuroaprilian73@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', ' 8bf8695aa28a595a110df3621592341b', '2023-12-28 07:08:21'),
+(16, 'kuroaprilian73@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', ' 8bf8695aa28a595a110df3621592341b', '2023-12-28 07:08:40'),
+(17, 'kuroaprilian73@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', ' 8bf8695aa28a595a110df3621592341b', '2023-12-28 07:08:57'),
+(18, 'kuroaprilian73@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', '8bf8695aa28a595a110df3621592341b', '2023-12-28 07:09:22');
 
 -- --------------------------------------------------------
 
@@ -187,6 +210,27 @@ CREATE TABLE `auth_users_permissions` (
   `user_id` int UNSIGNED NOT NULL DEFAULT '0',
   `permission_id` int UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `detail_genre`
+--
+
+CREATE TABLE `detail_genre` (
+  `id_detail` int NOT NULL,
+  `id_anime` int UNSIGNED NOT NULL,
+  `id_genre` int UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `detail_genre`
+--
+
+INSERT INTO `detail_genre` (`id_detail`, `id_anime`, `id_genre`) VALUES
+(4, 34, 1),
+(5, 34, 2),
+(6, 34, 3);
 
 -- --------------------------------------------------------
 
@@ -218,24 +262,43 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 --
 
 CREATE TABLE `tbl_anime` (
-  `id_anime` int NOT NULL,
-  `judul` varchar(255) NOT NULL,
+  `id_anime` int UNSIGNED NOT NULL,
+  `judul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `deskripsi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `genre` varchar(100) DEFAULT NULL,
   `rating` float(3,2) DEFAULT NULL,
   `tahun` int DEFAULT NULL,
   `file_video` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `file_gambar` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `tbl_anime`
 --
 
-INSERT INTO `tbl_anime` (`id_anime`, `judul`, `deskripsi`, `genre`, `rating`, `tahun`, `file_video`, `file_gambar`, `created_at`, `updated_at`) VALUES
-(26, 'fasfga', 'fsgas', 'dfasfasdf', 8.21, 123413, '1702305429_af6de5863ebb12f3e7f3.mp4', '1702305429_fa7801e6c3d7d3f148ed.png', '2023-12-11 14:37:09', '2023-12-11 14:37:09');
+INSERT INTO `tbl_anime` (`id_anime`, `judul`, `deskripsi`, `rating`, `tahun`, `file_video`, `file_gambar`, `created_at`, `updated_at`) VALUES
+(34, 'naruto', 'ninja', 1.23, 1234, 'naruto_2.mp4', 'Screenshot 2023-12-30 014806.png', '2023-12-30 05:50:37', '2023-12-30 05:50:37');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_genre`
+--
+
+CREATE TABLE `tbl_genre` (
+  `id_genre` int UNSIGNED NOT NULL,
+  `genre` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tbl_genre`
+--
+
+INSERT INTO `tbl_genre` (`id_genre`, `genre`) VALUES
+(1, 'comedy'),
+(2, 'action'),
+(3, 'shounen');
 
 -- --------------------------------------------------------
 
@@ -266,7 +329,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `username`, `password_hash`, `reset_hash`, `reset_at`, `reset_expires`, `activate_hash`, `status`, `status_message`, `active`, `force_pass_reset`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(9, 'kuroaprilian73@gmail.com', 'admin', '$2y$10$osmemsQLmjwfiIGIIRPv8OCpXNkq6STbDQH3KDr7utcWtFhiffVOO', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2023-12-10 01:07:44', '2023-12-10 01:07:44', NULL);
+(9, 'kuroaprilian73@gmail.com', 'admin', '$2y$10$BvCzIodque5gryORoz65ueYxlDS9Hsmz6VzpsuUr01UsIDBOaWOea', NULL, '2023-12-28 07:09:23', NULL, NULL, NULL, NULL, 1, 0, '2023-12-10 01:07:44', '2023-12-28 07:09:23', NULL);
 
 --
 -- Indexes for dumped tables
@@ -334,6 +397,14 @@ ALTER TABLE `auth_users_permissions`
   ADD KEY `user_id_permission_id` (`user_id`,`permission_id`);
 
 --
+-- Indeks untuk tabel `detail_genre`
+--
+ALTER TABLE `detail_genre`
+  ADD PRIMARY KEY (`id_detail`),
+  ADD KEY `anime` (`id_anime`),
+  ADD KEY `genre` (`id_genre`);
+
+--
 -- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
@@ -344,6 +415,12 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `tbl_anime`
   ADD PRIMARY KEY (`id_anime`);
+
+--
+-- Indeks untuk tabel `tbl_genre`
+--
+ALTER TABLE `tbl_genre`
+  ADD PRIMARY KEY (`id_genre`);
 
 --
 -- Indeks untuk tabel `users`
@@ -373,7 +450,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT untuk tabel `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT untuk tabel `auth_permissions`
@@ -385,13 +462,19 @@ ALTER TABLE `auth_permissions`
 -- AUTO_INCREMENT untuk tabel `auth_reset_attempts`
 --
 ALTER TABLE `auth_reset_attempts`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `auth_tokens`
 --
 ALTER TABLE `auth_tokens`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `detail_genre`
+--
+ALTER TABLE `detail_genre`
+  MODIFY `id_detail` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -403,7 +486,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `tbl_anime`
 --
 ALTER TABLE `tbl_anime`
-  MODIFY `id_anime` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_anime` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_genre`
+--
+ALTER TABLE `tbl_genre`
+  MODIFY `id_genre` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
@@ -441,6 +530,13 @@ ALTER TABLE `auth_tokens`
 ALTER TABLE `auth_users_permissions`
   ADD CONSTRAINT `auth_users_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `auth_permissions` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `auth_users_permissions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `detail_genre`
+--
+ALTER TABLE `detail_genre`
+  ADD CONSTRAINT `anime` FOREIGN KEY (`id_anime`) REFERENCES `tbl_anime` (`id_anime`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `genre` FOREIGN KEY (`id_genre`) REFERENCES `tbl_genre` (`id_genre`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

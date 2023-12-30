@@ -72,7 +72,19 @@
                         </div>
                         <div class="form-group">
                             <label>Genre</label>
-                            <input type="text" name="genre" class="form-control" placeholder="Genre ..." value="<?= old('genre'); ?>">
+                            <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+                            <select name="genre[]" class="form-control select2 select2-dark" multiple="multiple" placeholder="Genre ...">
+                                <?php
+                                foreach ($genre as $option) : ?>
+                                    <option value="<?= $option['id_genre']; ?>"><?= $option['genre']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <script>
+                                $(document).ready(function() {
+                                    // Inisialisasi Select2 pada elemen dengan class "select2"
+                                    $('.select2').select2();
+                                });
+                            </script>
                         </div>
                         <div class="form-group">
                             <label>Rating</label>

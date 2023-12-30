@@ -80,16 +80,16 @@
               foreach ($anime as $key) : ?>
                 <tr>
                   <td><?= $no++; ?></td>
-                  <td><?= $key['judul']; ?></td>
-                  <td><?= $key['deskripsi']; ?></td>
-                  <td><?= $key['genre']; ?></td>
-                  <td><?= $key['rating']; ?></td>
-                  <td><?= $key['tahun']; ?></td>
-                  <td><button onclick="openVideo('<?= base_url('uploud/video/' . $key['file_video']); ?>')" class="btn btn-secondary">Buka Video</button></td>
-                  <td><img src="<?= base_url('uploud/images/' . $key['file_gambar']); ?>" width="50px" height="50px" alt=""></td>
+                  <td><?= $key->judul; ?></td>
+                  <td><?= $key->deskripsi; ?></td>
+                  <td><?= $key->genres; ?></td>
+                  <td><?= $key->rating; ?></td>
+                  <td><?= $key->tahun; ?></td>
+                  <td><button onclick="openVideo('<?= base_url('uploud/video/' . $key->file_video); ?>')" class="btn btn-secondary">Buka Video</button></td>
+                  <td><img src="<?= base_url('uploud/images/' . $key->file_gambar); ?>" width="50px" height="50px" alt=""></td>
                   <td>
-                    <a href="anime/edit/<?php echo $key['id_anime']; ?>" class="btn btn-warning">Edit</a> |
-                    <a href="#" url="anime/delete/ <?= $key['id_anime']; ?>" class="btn btn-danger" id="delete">Hapus</a>
+                    <a href="anime/edit/<?php echo $key->id_anime; ?>" class="btn btn-warning">Edit</a> |
+                    <a href="#" url="anime/delete/ <?= $key->id_anime; ?>" class="btn btn-danger" id="delete">Hapus</a>
                   </td>
                 </tr>
               <?php endforeach; ?>
