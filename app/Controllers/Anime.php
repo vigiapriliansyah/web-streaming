@@ -105,10 +105,14 @@ class Anime extends BaseController
     public function edit($id_anime)
     {
         $anime = $this->animeModel->data_anime($id_anime);
+        $genre = $this->genreModel->findAll();
+        $selectedGenreIds = $this->detailGenreModel->getGenreIdsByAnimeId($id_anime);
 
         $data = [
             'title' => 'Edit | Dashboard',
-            'anime' => $anime
+            'anime' => $anime,
+            'genre' => $genre,
+            'selectedGenreIds' => $selectedGenreIds,
         ];
 
         echo view('dashboard/edit_anime', $data);
@@ -144,7 +148,6 @@ class Anime extends BaseController
         $data = [
             'judul' => $this->request->getVar('judul'),
             'deskripsi' => $this->request->getVar('deskripsi'),
-            'genre' => $this->request->getVar('genre'),
             'rating' => $this->request->getVar('rating'),
             'tahun' => $this->request->getVar('tahun'),
             'file_video' => $namaVideo,
@@ -152,8 +155,24 @@ class Anime extends BaseController
         ];
 
         $this->animeModel->update_data($data, $id_anime);
+
+        // Hapus genre yang sudah ada untuk anime tersebut
+        $this->detailGenreModel->where('id_anime', $id_anime)->delete();
+
+        // Tambahkan kembali genre yang baru dipilih
+        $genre = $this->request->getVar('genre');
+
+        foreach ($genre as $dataGenre) {
+            $additionalData = [
+                'id_anime' => $id_anime,
+                'id_genre' => $dataGenre
+            ];
+            $this->detailGenreModel->save($additionalData);
+        }
+
         return redirect()->to('anime')->with('success', "Data berhasil diupdate");
     }
+
 
 
     public function delete($id_anime)

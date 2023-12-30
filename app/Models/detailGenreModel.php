@@ -14,14 +14,21 @@ class detailGenreModel extends Model
     {
         return $this->find($id_detail);
     }
+
     public function update_data($data, $id_detail)
     {
         $query = $this->db->table($this->table)->update($data, array('id_detail' => $id_detail));
         return $query;
     }
+
     public function delete_data($id_detail)
     {
         $query = $this->db->table($this->table)->delete(array('id_detail' => $id_detail));
         return $query;
+    }
+
+    public function getGenreIdsByAnimeId($id_anime)
+    {
+        return $this->select('id_genre')->where('id_anime', $id_anime)->findAll();
     }
 }

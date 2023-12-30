@@ -2,10 +2,7 @@
 <?= $this->section('konten'); ?>
 
 
-<!-- <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__wobble" src="<?= base_url('assets/dist/img/AdminLTELogo.png'); ?>" alt="AdminLTELogo" height="60" width="60">
-</div> -->
-<!-- testing -->
+
 <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -71,7 +68,20 @@
                         </div>
                         <div class="form-group">
                             <label>Genre</label>
-                            <input type="text" name="genre" class="form-control" placeholder="Genre ..." value="<?= $anime['genre']; ?>">
+
+                            <select name="genre[]" class="form-control select2 select2-dark" multiple="multiple" placeholder="Genre ...">
+                                <?php foreach ($genre as $option) : ?>
+                                    <option value="<?= $option['id_genre']; ?>" <?= in_array($option['id_genre'], array_column($selectedGenreIds, 'id_genre')) ? 'selected' : ''; ?>>
+                                        <?= $option['genre']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <script>
+                                $(document).ready(function() {
+                                    // Inisialisasi Select2 pada elemen dengan class "select2"
+                                    $('.select2').select2();
+                                });
+                            </script>
                         </div>
                         <div class="form-group">
                             <label>Rating</label>
@@ -112,6 +122,7 @@
         </div><!-- /.container-fluid -->
     </section>
 </div>
+
 <script>
     function displayFileName(inputId) {
         const fileInput = document.getElementById(inputId);
