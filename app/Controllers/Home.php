@@ -42,7 +42,6 @@ ta.id_anime=dg.id_anime */
 
     public function genreList()
     {
-
         $genre = new genreModel();
         $data_genre = $genre->get_genre();
 
@@ -53,6 +52,11 @@ ta.id_anime=dg.id_anime */
 
         $result = $builder->get()->getResultArray();
 
+        // Mengurutkan array berdasarkan judul anime (urutan abjad a-z)
+        usort($result, function ($a, $b) {
+            return strcmp($a['judul'], $b['judul']);
+        });
+
         $data = [
             'title' => 'Genre | 5nime',
             'anime' => $result,
@@ -60,6 +64,7 @@ ta.id_anime=dg.id_anime */
         ];
         return view('/home/genreList', $data);
     }
+
 
     public function contact()
     {
