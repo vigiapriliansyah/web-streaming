@@ -10,6 +10,11 @@ class genreModel extends Model
     protected $primaryKey = 'id_genre';
     protected $allowedFields = 'genre';
 
+    public function get_genre()
+    {
+        return $this->findAll();
+    }
+
     public function data_genre($id_genre)
     {
         return $this->find($id_genre);
