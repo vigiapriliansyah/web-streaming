@@ -9,7 +9,7 @@
                 <div class="col-sm-6 col-md-12 single">
                     <h2>Streaming Black Butler Sub Indo</h2>
                     <div class="flex">
-                        <img src="<?= base_url("assets/black.jpg")?>" alt="">
+                        <img src="<?= base_url("assets/black.jpg") ?>" alt="">
                         <div class="text">
                             <div class="text-right">
                                 <p>Judul : Black Butler: Book of the Atlantic</p>
@@ -38,32 +38,31 @@
                         berada di balik necromancy yang berani ini — dan apakah mereka siap untuk mengetahuinya?
                     </p>
                     <div class="video">
-                        <video src="<?= base_url('assets/black_butler.mp4')?>" controls width="100%"></video>
+                        <video src="<?= base_url('assets/black_butler.mp4') ?>" controls width="100%"></video>
                     </div>
                     <div class="comment">
                     </div>
                     <div class="com">
                         <div id="disqus_thread"></div>
                         <script>
-                        /**
-                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                        /*
-                        var disqus_config = function () {
-                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        };
-                        */
-                        (function() { // DON'T EDIT BELOW THIS LINE
-                            var d = document,
-                                s = d.createElement('script');
-                            s.src = 'https://website-streaming-anime.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                            /*
+                            var disqus_config = function () {
+                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            };
+                            */
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document,
+                                    s = d.createElement('script');
+                                s.src = 'https://website-streaming-anime.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
                         </script>
-                        <noscript>Please enable JavaScript to view the <a
-                                href="https://disqus.com/?ref_noscript">comments powered by
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
                                 Disqus.</a></noscript>
                     </div>
 
@@ -71,8 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="col-6 col-md-4 recomen"
-        style="background-color: #051527; height: 100vh; margin-top: 10px; border-radius: 10px;">
+    <div class="col-6 col-md-4 recomen" style="background-color: #051527; height: 100vh; margin-top: 10px; border-radius: 10px;">
         <h2>Rekomendasi</h2>
         <hr>
         <div class="recommend">

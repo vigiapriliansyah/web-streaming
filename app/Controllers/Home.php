@@ -25,20 +25,8 @@ INNER JOIN tbl_anime AS ta ON
 ta.id_anime=dg.id_anime */
     public function index()
     {
-        $genre = new genreModel();
-        $data_genre = $genre->get_genre();
-
-        $builder = $this->animeModel->db->table('tbl_anime ta');
-        $builder->select('tg.genre as genre,ta.judul AS judul');
-        $builder->join('detail_genre dg', 'ta.id_anime = dg.id_anime');
-        $builder->join('tbl_genre tg', 'dg.id_genre = tg.id_genre');
-
-        $result = $builder->get()->getResult();
-
         $data = [
-            'title' => 'Home | 5nime',
-            'anime' => $result,
-            'genre' => $data_genre
+            'title' => 'Home | 5nime'
         ];
 
         return view('/home/index', $data);
