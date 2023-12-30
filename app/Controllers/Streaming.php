@@ -21,9 +21,12 @@ class Streaming extends BaseController
 
     public function index()
     {
+        $anime = $this->animeModel->findAll();
+
         $data = [
-            'title' => 'streaming | 5nime'
+            'title' => 'streaming | 5nime',
+            'anime' => $anime
         ];
-        return view('streaming', $data);
+        return view('streaming/index', $data);
     }
 }
