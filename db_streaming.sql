@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 30 Des 2023 pada 06.07
+-- Waktu pembuatan: 30 Des 2023 pada 14.14
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -223,15 +223,6 @@ CREATE TABLE `detail_genre` (
   `id_genre` int UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `detail_genre`
---
-
-INSERT INTO `detail_genre` (`id_detail`, `id_anime`, `id_genre`) VALUES
-(4, 34, 1),
-(5, 34, 2),
-(6, 34, 3);
-
 -- --------------------------------------------------------
 
 --
@@ -273,13 +264,6 @@ CREATE TABLE `tbl_anime` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data untuk tabel `tbl_anime`
---
-
-INSERT INTO `tbl_anime` (`id_anime`, `judul`, `deskripsi`, `rating`, `tahun`, `file_video`, `file_gambar`, `created_at`, `updated_at`) VALUES
-(34, 'naruto', 'ninja', 1.23, 1234, 'naruto_2.mp4', 'Screenshot 2023-12-30 014806.png', '2023-12-30 05:50:37', '2023-12-30 05:50:37');
-
 -- --------------------------------------------------------
 
 --
@@ -296,9 +280,29 @@ CREATE TABLE `tbl_genre` (
 --
 
 INSERT INTO `tbl_genre` (`id_genre`, `genre`) VALUES
-(1, 'comedy'),
-(2, 'action'),
-(3, 'shounen');
+(1, 'Action'),
+(2, 'Adventure'),
+(3, 'Comedy'),
+(4, 'Demons'),
+(5, 'Drama'),
+(6, 'Fantasy'),
+(7, 'Game'),
+(8, 'Historical'),
+(9, 'Magic'),
+(10, 'Mecha'),
+(11, 'Music'),
+(12, 'Mystery'),
+(13, 'Parody'),
+(14, 'Psychological'),
+(15, 'Romance'),
+(16, 'School'),
+(17, 'Sci-Fi'),
+(18, 'Shounen'),
+(19, 'Slice of Life'),
+(20, 'Sports'),
+(21, 'Super Power'),
+(22, 'Supernatural'),
+(23, 'Thriller');
 
 -- --------------------------------------------------------
 
@@ -474,7 +478,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT untuk tabel `detail_genre`
 --
 ALTER TABLE `detail_genre`
-  MODIFY `id_detail` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_detail` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -486,13 +490,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `tbl_anime`
 --
 ALTER TABLE `tbl_anime`
-  MODIFY `id_anime` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_anime` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_genre`
 --
 ALTER TABLE `tbl_genre`
-  MODIFY `id_genre` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_genre` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
