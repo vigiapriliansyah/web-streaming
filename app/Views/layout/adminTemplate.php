@@ -27,6 +27,40 @@
         .table>tbody>tr>td {
             vertical-align: middle;
         }
+
+        /* CSS untuk mengubah warna select2 menjadi dark */
+        .select2-container--default .select2-selection--multiple {
+            background-color: #36454F;
+            /* Warna latar belakang */
+            color: #36454F;
+            /* Warna teks */
+            border: 1px solid #343a40;
+            /* Warna border */
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: #36454F;
+            /* Warna latar belakang item yang dipilih */
+            color: black;
+            /* Warna teks item yang dipilih */
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: #ffffff;
+            /* Warna teks tombol hapus item yang dipilih */
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+            color: #dc3545;
+            /* Warna teks tombol hapus item yang dipilih saat dihover */
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice:hover {
+            background-color: #495057;
+            /* Warna latar belakang item yang dipilih saat dihover */
+        }
+
+        /* Tambahkan CSS tambahan sesuai kebutuhan Anda */
     </style>
 </head>
 
