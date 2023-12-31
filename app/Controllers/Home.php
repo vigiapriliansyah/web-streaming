@@ -29,11 +29,32 @@ class Home extends BaseController
 
     public function animeList()
     {
+        $builder = $this->animeModel->db->table('tbl_anime ta');
+        $builder->select('ta.judul AS judul, ta.id_anime');
+
+        // Mengurutkan array berdasarkan judul anime (urutan abjad a-z)
+        $builder->orderBy('judul', 'ASC');
+
+        $result = $builder->get()->getResultArray();
+
+        $groupedAnime = [];
+
+        foreach ($result as $title) {
+            // Ambil huruf pertama dari judul anime dan konversi ke huruf besar
+            $firstLetter = strtoupper(substr($title['judul'], 0, 1));
+
+            // Tambahkan judul anime ke kelompok yang sesuai dengan huruf pertama
+            $groupedAnime[$firstLetter][] = $title;
+        }
+
         $data = [
-            'title' => 'AnimeList | 5nime'
+            'title' => 'AnimeList | 5nime',
+            'groupedAnime' => $groupedAnime,
         ];
+
         return view('/home/animeList', $data);
     }
+
 
     public function genreList()
     {
