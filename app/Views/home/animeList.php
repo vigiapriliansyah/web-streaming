@@ -11,7 +11,7 @@
                         <h1 style="color: white;"><?= $letter; ?></h1>
                         <hr class="bg-danger border-2 border-top border-white" />
                         <?php foreach ($titles as $title) { ?>
-                            <li style="color: white;"><?= $title['judul']; ?></li>
+                            <li style="color: white;"><a class="text-decoration-none text-white" href="<?= base_url('streaming/' . $title['id_anime']); ?>"><?= $title['judul']; ?></a></li>
                         <?php } ?>
                     </div>
                 </div>
