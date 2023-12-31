@@ -5,7 +5,6 @@
     <section>
         <div class="d-flex justify-content-center container">
             <?php
-            // Loop untuk menampilkan setiap kelompok
             foreach ($groupedAnime as $letter => $titles) { ?>
                 <div class="p-2 col-5">
                     <div class="col">
