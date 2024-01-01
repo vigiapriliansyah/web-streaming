@@ -60,7 +60,7 @@
                                         <img src="<?= base_url('assets/black.jpg') ?>" class="card-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
-                                            <div class="more"><a href="/streaming/Black_Butler">Black Butler</a></div>
+                                            <div class="more"><a href="/streaming/index">Black Butler</a></div>
                                         </div>
                                     </div>
                                 </div>
