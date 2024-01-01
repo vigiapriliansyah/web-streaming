@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<?= base_url('/style/home.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('/font/css/all.css'); ?>">
     <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/videojs-seek-buttons/dist/videojs-seek-buttons.css">
 
 </head>
 

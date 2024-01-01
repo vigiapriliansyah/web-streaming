@@ -19,23 +19,23 @@
                             </div>
                         </div>
                     </div>
-                    <p class="pt-3"><?= $anime[0]['deskripsi']; ?></p>
-                    <div class="video">
-                        <video id="my-video" class="video-js" controls preload="auto" width="800" height="500" poster="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" data-setup="{}">
-                            <source src="<?= base_url('uploud/video/' . $anime[0]['file_video']); ?>" type="video/mp4" />
-                            <source src="MY_VIDEO.webm" type="video/webm" />
-                            <p class="vjs-no-js">
-                                To view this video please enable JavaScript, and consider upgrading to a
-                                web browser that
-                                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                            </p>
-                        </video>
+                    <p class="pt-3 pb-3"><?= $anime[0]['deskripsi']; ?></p>
+
+                    <video id="my-video" class="video-js" controls preload="auto" width="800" height="450" poster="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" data-setup="{}">
+                        <source src="<?= base_url('uploud/video/' . $anime[0]['file_video']); ?>" type="video/mp4" />
+                        <source src="MY_VIDEO.webm" type="video/webm" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
 
 
 
 
-                        <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
-                    </div>
+                    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+
                 </div>
             </div>
 

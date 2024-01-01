@@ -334,9 +334,7 @@ section .recomen h2 {
   height: 250px;
 }
 /* video */
-.video {
-  margin-top: 6rem;
-}
+
 
 .recommend ul li a {
   color: #fff;
@@ -388,14 +386,11 @@ section .recomen h2 {
     width: 150px;
     height: 175px;
   }
-  .video {
-    width: 375px;
   }
   .comment {
     margin-top: 3rem;
     width: auto;
   }
-}
 
 @media (max-width: 600px) {
 }
