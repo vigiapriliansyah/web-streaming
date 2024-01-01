@@ -329,29 +329,23 @@ section .recomen h2 {
 .flex {
   display: flex;
 }
+.flex img {
+  width: 200px;
+  height: 250px;
+}
+/* video */
+.video {
+  margin-top: 6rem;
+}
 
 .recommend ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-/* video */
-.video {
-  margin-top: 6rem;
-}
-
 /* ---comment-- */
 .comment {
   margin-top: 7rem;
-}
-
-.comment h1 {
-  float: left;
-  font-size: 30px;
-}
-
-.btn {
-  float: left;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -377,7 +371,7 @@ section .recomen h2 {
     width: 250px;
   }
   .center {
-    width: 100%;
+    width: fit-content;
   }
 
   .swiper {
@@ -388,6 +382,18 @@ section .recomen h2 {
   .recomen {
     margin: 15px 0;
     display: none;
+  }
+
+  .flex img {
+    width: 150px;
+    height: 175px;
+  }
+  .video {
+    width: 375px;
+  }
+  .comment {
+    margin-top: 3rem;
+    width: auto;
   }
 }
 
