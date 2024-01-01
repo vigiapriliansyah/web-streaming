@@ -18,3 +18,4 @@ $routes->get('/home', 'Home::index');
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+$routes->get('/streaming/(:num)', 'Streaming::anime/$1');

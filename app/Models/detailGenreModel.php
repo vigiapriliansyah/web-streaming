@@ -31,4 +31,14 @@ class detailGenreModel extends Model
     {
         return $this->select('id_genre')->where('id_anime', $id_anime)->findAll();
     }
+
+    public function getGenreByAnimeId($id_anime)
+    {
+        $builder = $this->db->table('detail_genre dg');
+        $builder->select('tg.genre');
+        $builder->join('tbl_genre tg', 'dg.id_genre = tg.id_genre');
+        $builder->where('dg.id_anime', $id_anime);
+
+        return $builder->get()->getResultArray();
+    }
 }

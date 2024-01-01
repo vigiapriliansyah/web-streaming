@@ -14,10 +14,12 @@
                             <hr class="bg-danger border-2 border-top border-white" />
                             <?php foreach ($anime as $judul) {
                                 if ($key['genre'] == $judul['genre']) { ?>
-                                    <li><a class="text-decoration-none text-white" href="<?= base_url('streaming/' . $judul['id_anime']); ?>"><?= $judul['judul']; ?></a></li>
-                            <?php }
-                            } ?>
-
+                                    <li>
+                                        <a class="text-decoration-none text-white" href="<?= base_url('streaming/' . $judul['id_anime']); ?>">
+                                            <?= $judul['judul']; ?>
+                                        </a>
+                                    </li> <?php }
+                                    } ?>
                         </div>
                     </div>
                 <?php  }; ?>
