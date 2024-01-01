@@ -9,7 +9,7 @@
                 <div class="col-sm-6 col-md-12 single">
                     <h2>Streaming <?= $anime[0]['judul']; ?> Sub Indo</h2>
                     <div class="flex">
-                        <img src="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" alt="" height="400px" width="300px">
+                        <img src="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" alt="">
                         <div class="text">
                             <div class="text-right">
                                 <p>Judul :<?= $anime[0]['judul']; ?></p>
