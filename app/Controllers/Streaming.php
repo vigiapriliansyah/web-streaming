@@ -6,6 +6,8 @@ use App\Models\animeModel;
 use App\Models\detailGenreModel;
 use App\Models\genreModel;
 
+use App\Libraries\VideoStream;
+
 class Streaming extends BaseController
 {
 
@@ -52,7 +54,7 @@ class Streaming extends BaseController
             $genreValues = array_column($genres, 'genre');
             $anime['genres'] = implode(', ', $genreValues);
         } else {
-            $anime['genres'] = 'Tidak ada genre';
+            $anime['genres'] = 'Tidak ada genre'; // Berikan nilai default jika tidak ada genre
         }
 
         $data = [
@@ -61,5 +63,25 @@ class Streaming extends BaseController
         ];
 
         return view('streaming/index', $data);
+    }
+
+    public function video($animeId)
+    {
+        $anime = $this->animeModel->find($animeId);
+
+        if (!$anime) {
+            return redirect()->to('/');
+        }
+
+        // Sesuaikan dengan path video yang sesuai di direktori upload Anda
+        $videoPath = FCPATH . 'uploads/video/' . $anime['file_video'];
+
+        // Pastikan path file video benar
+        if (!file_exists($videoPath)) {
+            return redirect()->to('/');
+        }
+
+        $stream = new VideoStream($videoPath);
+        $stream->start();
     }
 }

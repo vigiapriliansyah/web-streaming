@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?= base_url('/style/home.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('/font/css/all.css'); ?>">
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
 
 </head>
 
