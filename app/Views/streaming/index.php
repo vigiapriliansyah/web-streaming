@@ -24,9 +24,13 @@
                     <p class="pt-3"><?= $anime[0]['deskripsi']; ?></p>
                     <div class="video">
                         <video controls width="100%" src="<?= base_url('uploud/video/' . $anime[0]['file_video']); ?>"></video>
+
                     </div>
                 </div>
             </div>
+
+
+
 
             <div class="pt-3" id="disqus_thread"></div>
             <script>
