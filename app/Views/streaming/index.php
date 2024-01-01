@@ -22,7 +22,8 @@
                     <p class="pt-3"><?= $anime[0]['deskripsi']; ?></p>
                     <div class="video">
                         <video id="my-video" class="video-js" controls preload="auto" width="800" height="500" poster="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" data-setup="{}">
-
+                            <source src="<?= base_url('uploud/video/' . $anime[0]['file_video']); ?>" type="video/mp4" />
+                            <source src="MY_VIDEO.webm" type="video/webm" />
                             <p class="vjs-no-js">
                                 To view this video please enable JavaScript, and consider upgrading to a
                                 web browser that
