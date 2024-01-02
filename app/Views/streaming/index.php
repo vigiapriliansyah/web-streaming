@@ -22,8 +22,7 @@
                     <p class="pt-3 pb-3"><?= $anime[0]['deskripsi']; ?></p>
 
                     <video id="my-video" class="video-js" controls preload="auto" width="800" height="450" poster="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" data-setup="{}">
-                        <source src="<?= base_url('uploud/video/' . $anime[0]['file_video']); ?>" type="video/mp4" />
-                        <source src="MY_VIDEO.webm" type="video/webm" />
+                        <source src="<?= site_url('streaming/video/' . $anime[0]['id_anime']); ?>" type="video/mp4" />
                         <p class="vjs-no-js">
                             To view this video please enable JavaScript, and consider upgrading to a
                             web browser that
@@ -31,16 +30,10 @@
                         </p>
                     </video>
 
-
-
-
                     <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
 
                 </div>
             </div>
-
-
-
 
             <div class="comment">
                 <div class="pt-3" id="disqus_thread"></div>

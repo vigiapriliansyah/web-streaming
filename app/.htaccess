@@ -1,6 +1,22 @@
-<IfModule authz_core_module>
+<!-- <IfModule authz_core_module>
     Require all denied
 </IfModule>
 <IfModule !authz_core_module>
     Deny from all
+</IfModule> -->
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+    # Izinkan akses ke direktori uploud/video/
+    RewriteCond %{REQUEST_URI} ^/uploud/video/
+    RewriteRule ^uploud/video/ - [L]
+
+    # ... aturan lainnya ...
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
+

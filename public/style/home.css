@@ -271,7 +271,7 @@ section .swiper {
     margin-left: 0;
   }
 }
-
+/* streaming */
 section {
   margin-top: 5rem;
   color: #fff;
@@ -330,8 +330,8 @@ section .recomen h2 {
   display: flex;
 }
 .flex img {
-  width: 200px;
-  height: 250px;
+  width: 280px;
+  height: 350px;
 }
 /* video */
 
@@ -341,10 +341,7 @@ section .recomen h2 {
   text-decoration: none;
 }
 
-/* ---comment-- */
-.comment {
-  margin-top: 7rem;
-}
+
 
 @media (min-width: 320px) and (max-width: 480px) {
   /* section */

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Libraries\VideoStream;
+
 use App\Models\animeModel;
 use App\Models\detailGenreModel;
 use App\Models\genreModel;
@@ -62,5 +64,18 @@ class Streaming extends BaseController
         ];
 
         return view('streaming/index', $data);
+    }
+
+    public function video($animeId)
+    {
+        $anime = $this->animeModel->find($animeId);
+
+        if (!$anime) {
+            return redirect()->to('/');
+        }
+
+        $videoPath = FCPATH . 'uploud/video/' . $anime['file_video'];
+        $videoStream = new VideoStream($videoPath);
+        $videoStream->start();
     }
 }
