@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<?= base_url('/style/home.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('/font/css/all.css'); ?>">
     <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    <script src="<?= base_url('player/playerjs.js'); ?>" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -142,6 +144,19 @@
         function HideMenu() {
             document.getElementById("sidebar").style.top = "-100vh";
         }
+    </script>
+
+    <script>
+        var playerScriptUrl = "<?= base_url('playerjs.js'); ?>";
+        var videoFileUrl = "<?= site_url('streaming/video/' . $anime[0]['id_anime']); ?>";
+        var thumbnailUrl = "<?= base_url('uploud/images/' .  $anime[0]['file_gambar']); ?>";
+
+        var player = new Playerjs({
+            id: "player",
+            file: videoFileUrl,
+            poster: thumbnailUrl,
+            title: "<?= $anime[0]['judul']; ?>"
+        });
     </script>
 </body>
 

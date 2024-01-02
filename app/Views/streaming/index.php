@@ -21,16 +21,9 @@
                     </div>
                     <p class="pt-3 pb-3"><?= $anime[0]['deskripsi']; ?></p>
 
-                    <video id="my-video" class="video-js" controls preload="auto" width="800" height="450" poster="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" data-setup="{}">
-                        <source src="<?= site_url('streaming/video/' . $anime[0]['id_anime']); ?>" type="video/mp4" />
-                        <p class="vjs-no-js">
-                            To view this video please enable JavaScript, and consider upgrading to a
-                            web browser that
-                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                        </p>
-                    </video>
+                    <div id="player"></div>
 
-                    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+
 
                 </div>
             </div>
