@@ -135,7 +135,6 @@ class Anime extends BaseController
             $namaVideo = $anime['file_video'];
         }
 
-        // Jika file gambar baru disediakan, pindahkan dan dapatkan nama file
         if ($fileGambar->isValid()) {
             $fileGambar->move('uploud/images');
             $namaGambar = $fileGambar->getName();

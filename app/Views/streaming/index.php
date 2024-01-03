@@ -60,7 +60,7 @@
         <hr>
         <div class="recommend">
             <ul>
-                <li><a href="#"></a></li>
+                <!-- <li><a href="#"> 6';78ool</a></li> -->
                 <li><a href="#">Gintama: The Final</a></li>
                 <li><a href="#">Date A Bullet: Nightmare or Queen</a></li>
                 <li><a href="#">Ansatsu Kyoushitsu: 365-nIchi no Jikan</a></li>
