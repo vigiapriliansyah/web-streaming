@@ -10,18 +10,33 @@ class animeModel extends Model
     protected $useTimestamps = true;
     protected $primaryKey = 'id_anime';
     protected $allowedFields =  ['judul', 'deskripsi', 'rating', 'tahun', 'file_video', 'file_gambar'];
+
     public function data_anime($id_anime)
     {
         return $this->find($id_anime);
     }
+
     public function update_data($data, $id_anime)
     {
         $query = $this->db->table($this->table)->update($data, array('id_anime' => $id_anime));
         return $query;
     }
+
     public function delete_data($id_anime)
     {
         $query = $this->db->table($this->table)->delete(array('id_anime' => $id_anime));
         return $query;
+    }
+
+    // Streaming
+    public function getAnimeInfo()
+    {
+        $builder = $this->db->table('tbl_anime ta');
+        $builder->select('ta.*, GROUP_CONCAT(tg.genre) AS genres');
+        $builder->join('detail_genre dg', 'ta.id_anime = dg.id_anime', 'left');
+        $builder->join('tbl_genre tg', 'dg.id_genre = tg.id_genre', 'left');
+        $builder->groupBy('ta.id_anime');
+
+        return $builder->get()->getResultArray();
     }
 }

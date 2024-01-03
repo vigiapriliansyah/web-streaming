@@ -25,13 +25,7 @@ class Streaming extends BaseController
 
     public function index()
     {
-        $builder = $this->animeModel->db->table('tbl_anime ta');
-        $builder->select('ta.*, GROUP_CONCAT(tg.genre) AS genres');
-        $builder->join('detail_genre dg', 'ta.id_anime = dg.id_anime', 'left');
-        $builder->join('tbl_genre tg', 'dg.id_genre = tg.id_genre', 'left');
-        $builder->groupBy('ta.id_anime');
-
-        $anime = $builder->get()->getResultArray();
+        $anime = $this->animeModel->getAnimeInfo();
 
         $data = [
             'title' => 'streaming | 5nime',
