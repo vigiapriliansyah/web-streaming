@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?= base_url('/font/css/all.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('/style/home.css'); ?>">
+    <script src="<?= base_url('player/playerjs.js'); ?>" type="text/javascript"></script>
 </head>
 
 <body>
@@ -164,6 +165,8 @@
             document.getElementById("sidebar").style.top = "-100vh";
         }
     </script>
+
+
 </body>
 
 </html>

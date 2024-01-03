@@ -11,6 +11,7 @@ class Home extends BaseController
     protected $animeModel;
     protected $genreModel;
     protected $detailGenreModel;
+
     public function __construct()
     {
         $this->animeModel = new animeModel();

@@ -271,8 +271,6 @@ section .swiper {
     margin-left: 0;
   }
 }
-
-
 /* streaming */
 section {
   margin-top: 5rem;
@@ -301,13 +299,13 @@ section .recomen h2 {
 }
 
 .center {
-  margin-left: 50px;
   float: left;
   width: 800px;
-  margin: center;
+  margin: auto;
 }
 
 .content {
+  width: 100%;
   padding: 10px;
   background: #051527;
   float: left;
@@ -339,9 +337,12 @@ section .recomen h2 {
 /* video */
 
 
+/* recommend */
+
 .recommend ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 18px;
 }
 
 

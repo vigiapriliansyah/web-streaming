@@ -81,7 +81,7 @@
                 <tr>
                   <td><?= $no++; ?></td>
                   <td><?= $key->judul; ?></td>
-                  <td><?= $key->deskripsi; ?></td>
+                  <td class="text-justify w-25"><?= $key->deskripsi; ?></td>
                   <td><?= $key->genres; ?></td>
                   <td><?= $key->rating; ?></td>
                   <td><?= $key->tahun; ?></td>

@@ -1,4 +1,4 @@
-<?= $this->extend('/layout/Streaming'); ?>
+<?= $this->extend('/layout/templateHome'); ?>
 <?= $this->section('konten'); ?>
 
 <!-- section -->
@@ -23,7 +23,18 @@
 
                     <div id="player"></div>
 
+                    <script>
+                        var playerScriptUrl = "<?= base_url('playerjs.js'); ?>";
+                        var videoFileUrl = "<?= site_url('streaming/video/' . $anime[0]['id_anime']); ?>";
+                        var thumbnailUrl = "<?= base_url('uploud/images/' .  $anime[0]['file_gambar']); ?>";
 
+                        var player = new Playerjs({
+                            id: "player",
+                            file: videoFileUrl,
+                            poster: thumbnailUrl,
+                            title: "<?= $anime[0]['judul']; ?>"
+                        });
+                    </script>
 
                 </div>
             </div>
@@ -55,19 +66,16 @@
         </div>
 
     </div>
-    <div class="col-6 col-md-4 recomen" style="background-color: #051527; height: 100vh; margin-top: 10px; border-radius: 10px;">
+    <div class="col-md-4 recomen" style="background-color: #051527; height: 100vh; margin-top: 10px; border-radius: 10px; margin-right:30px;">
         <h2>Rekomendasi</h2>
         <hr>
         <div class="recommend">
             <ul>
-                <!-- <li><a href="#"> 6';78ool</a></li> -->
-                <li><a href="#">Gintama: The Final</a></li>
-                <li><a href="#">Date A Bullet: Nightmare or Queen</a></li>
-                <li><a href="#">Ansatsu Kyoushitsu: 365-nIchi no Jikan</a></li>
-                <li><a href="#">Chuunibyou demo Koi ga Shitai! Movie</a></li>
+                <?php foreach ($rekomendasiRandom as $anime) : ?>
+                    <li><a href="<?= base_url('streaming/' . $anime['id_anime']); ?>"><?= $anime['judul']; ?></a></li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>
 </section>
-</div>
 <?= $this->endSection(); ?>

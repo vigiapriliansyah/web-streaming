@@ -27,8 +27,10 @@ class Streaming extends BaseController
     {
         $anime = $this->animeModel->getAnimeInfo();
 
+
         $data = [
-            'anime' => $anime
+            'anime' => $anime,
+
         ];
 
         return view('streaming/index', $data);
@@ -37,7 +39,7 @@ class Streaming extends BaseController
     public function anime($animeId)
     {
         $anime = $this->animeModel->find($animeId);
-
+        $rekomendasiRandom = $this->animeModel->rekomendasiRandom(10);
         if (!$anime) {
             return redirect()->to('/');
         }
@@ -54,6 +56,7 @@ class Streaming extends BaseController
         $data = [
             'title' => "Streaming {$anime['judul']} | 5nime",
             'anime' => [$anime],
+            'rekomendasiRandom' => $rekomendasiRandom,
         ];
 
         return view('streaming/index', $data);

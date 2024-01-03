@@ -55,4 +55,13 @@ class animeModel extends Model
 
         return $query->findAll();
     }
+
+    public function rekomendasiRandom($limit = 10)
+    {
+        $this->select('id_anime, judul');
+        $this->orderBy('RAND()');
+        $this->limit($limit);
+
+        return $this->findAll();
+    }
 }
