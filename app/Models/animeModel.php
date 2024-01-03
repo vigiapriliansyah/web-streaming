@@ -28,7 +28,6 @@ class animeModel extends Model
         return $query;
     }
 
-    // Streaming
     public function getAnimeInfo()
     {
         $builder = $this->db->table('tbl_anime ta');
@@ -38,5 +37,22 @@ class animeModel extends Model
         $builder->groupBy('ta.id_anime');
 
         return $builder->get()->getResultArray();
+    }
+
+    public function getRecentlyAddedAnime()
+    {
+        return $this->orderBy('created_at', 'DESC') // Sesuaikan dengan kolom yang menyimpan waktu penambahan anime
+            ->findAll();
+    }
+
+    public function getAnimeByYear($year, $limit = null)
+    {
+        $query = $this->where('tahun', $year);
+
+        if ($limit) {
+            $query->limit($limit);
+        }
+
+        return $query->findAll();
     }
 }

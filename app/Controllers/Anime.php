@@ -34,8 +34,6 @@ class Anime extends BaseController
             // Add other data as needed
         ];
 
-
-
         echo view('dashboard/index', $data);
     }
 

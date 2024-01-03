@@ -20,8 +20,13 @@ class Home extends BaseController
 
     public function index()
     {
+        $recentlyAddedAnime = $this->animeModel->getRecentlyAddedAnime();
+        $animeTahun2023 = $this->animeModel->getAnimeByYear(2023, 5);
+
         $data = [
-            'title' => 'Home | 5nime'
+            'recentlyAddedAnime' => $recentlyAddedAnime,
+            'animeTahun2023' => $animeTahun2023,
+            'title' => 'Home | 5nime',
         ];
 
         return view('/home/index', $data);

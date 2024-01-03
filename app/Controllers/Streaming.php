@@ -28,7 +28,6 @@ class Streaming extends BaseController
         $anime = $this->animeModel->getAnimeInfo();
 
         $data = [
-            'title' => 'streaming | 5nime',
             'anime' => $anime
         ];
 
