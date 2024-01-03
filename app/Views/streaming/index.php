@@ -12,7 +12,7 @@
                         <img src="<?= base_url('uploud/images/' . $anime[0]['file_gambar']); ?>" alt="">
                         <div class="text">
                             <div class="text-right">
-                                <p>Judul :<?= $anime[0]['judul']; ?></p>
+                                <p>Judul : <?= $anime[0]['judul']; ?></p>
                                 <p>Genre : <?= $anime[0]['genres']; ?></p>
                                 <p>Rating : <?= $anime[0]['rating']; ?></p>
                                 <p>Tahun : <?= $anime[0]['tahun']; ?></p>
@@ -60,7 +60,7 @@
         <hr>
         <div class="recommend">
             <ul>
-                <li><a href="#">Akira</a></li>
+                <li><a href="#"></a></li>
                 <li><a href="#">Gintama: The Final</a></li>
                 <li><a href="#">Date A Bullet: Nightmare or Queen</a></li>
                 <li><a href="#">Ansatsu Kyoushitsu: 365-nIchi no Jikan</a></li>
