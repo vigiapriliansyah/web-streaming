@@ -66,13 +66,10 @@ class animeModel extends Model
     }
 
     public function searchAnime($keyword)
-{
-    // Implement your search logic here using the $keyword
-    $builder = $this->db->table('tbl_anime');
-    $builder->like('judul', $keyword); // Assuming 'judul' is the field you want to search
+    {
+        $builder = $this->db->table('tbl_anime');
+        $builder->like('judul', $keyword);
 
-    return $builder->get()->getResultArray();
-}
-
-
+        return $builder->get()->getResultArray();
+    }
 }
