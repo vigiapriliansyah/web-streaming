@@ -9,7 +9,7 @@
                     <div class="p-2 col-5">
                         <div class="col">
                             <li>
-                                <a class="text-decoration-none text-white" href="<?= base_url('anime/detail/' . $result['id_anime']) ?>">
+                                <a class="text-decoration-none text-white" href="<?= base_url('streaming/' . $result['id_anime']) ?>">
                                     <?= $result['judul']; ?>
                                 </a>
                             </li>
