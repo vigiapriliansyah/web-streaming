@@ -60,9 +60,13 @@ class animeModel extends Model
     {
         $this->select('id_anime, judul');
         $this->orderBy('RAND()');
-        $this->limit($limit);
 
-        return $this->findAll();
+        $results = $this->findAll();
+
+        // Pastikan tidak melebihi batas yang diinginkan
+        $rekomendasiRandom = array_slice($results, 0, $limit);
+
+        return $rekomendasiRandom;
     }
 
     public function searchAnime($keyword)
