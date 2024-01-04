@@ -97,6 +97,9 @@ section .swiper {
   margin-left: 60px;
   width: 251px;
 }
+.col-md-4 .col .card{
+  margin-bottom: 2rem;
+}
 .col-sm-4 img {
   width: 250px;
 }

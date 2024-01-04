@@ -9,8 +9,7 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-                <img src="<?= base_url('assets/MV5BOGNjNzFhMGQtODc2MS00OGU0LThkN2UtODY1NmJmYWY0NmFiXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_.jpg') ?>"
-                    alt="" style="width: 100%;">
+                <img src="<?= base_url('assets/MV5BOGNjNzFhMGQtODc2MS00OGU0LThkN2UtODY1NmJmYWY0NmFiXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_.jpg') ?>" alt="" style="width: 100%;">
             </div>
             <div class="swiper-slide">
                 <img src="<?= base_url('assets/akira1.jpg') ?>" alt="" style="width: 100%; ">
@@ -41,18 +40,16 @@
                 <div class="container text-center">
                     <div class="row row-cols-1 row-cols-md-4 g-4">
                         <?php foreach ($recentlyAddedAnime as $anime) : ?>
-                        <div class="col">
-                            <div class="card">
-                                <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>"
-                                    class="card-img-top" alt="<?= $anime['judul']; ?>">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?= $anime['judul']; ?></h5>
-                                    <div class="more"><a
-                                            href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">Lihat
-                                            Detail</a></div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>" class="card-img-top" alt="<?= $anime['judul']; ?>">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $anime['judul']; ?></h5>
+                                        <div class="more"><a href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">Lihat
+                                                Detail</a></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -60,22 +57,20 @@
             <!-- Anime Tahun 2023 Section -->
             <div class="col-md-4">
                 <h3>| Anime Tahun 2023</h3>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <?php foreach ($animeTahun2023 as $anime) : ?>
+
+                <?php foreach ($animeTahun2023 as $anime) : ?>
                     <div class="col">
                         <div class="card">
-                            <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>" class="card-img-top"
-                                alt="<?= $anime['judul']; ?>">
+                            <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>" class="card-img-top" alt="<?= $anime['judul']; ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $anime['judul']; ?></h5>
-                                <div class="more"><a
-                                        href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">Lihat
+                                <div class="more"><a href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">Lihat
                                         Detail</a></div>
                             </div>
                         </div>
                     </div>
-                    <?php endforeach; ?>
-                </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </div>
