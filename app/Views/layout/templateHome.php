@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1D1B34;">
         <div class="container-fluid">
             <div>
-                <a class="navbar-brand" href="/home"><img src="<?= base_url('/assets/icon.png'); ?>" alt="icon" width="55" height="40"></a>
+                <a class="navbar-brand" href="/home"><img src="<?= base_url('/assets/icon.png'); ?>" alt="icon" width="55" height="40" style="border-radius: 70%;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -72,19 +72,19 @@
     <?= $this->renderSection('konten'); ?>
 
 
-    <footer class="footer-distributed footer" style="background-color: #1D1B34;">
+    <footer class="footer-distributed footer " style="background-color: #1D1B34;">
         <div class="footer-left">
             <im">
                 <h3>About<span>5NIME</span></h3>
 
                 <p class="footer-links">
-                    <a href="#">Home</a>
+                    <a href="/home/index">Home</a>
                     |
-                    <a href="#">Anime List</a>
+                    <a href="/home/animeList">Anime List</a>
                     |
-                    <a href="#">Genre List</a>
+                    <a href="/home/genreList">Genre List</a>
                     |
-                    <a href="#">Contact</a>
+                    <a href="/home/contact">Contact</a>
                 </p>
 
                 <p class="footer-company-name">© 2023 5NIME Web Streaming Anime</p>
