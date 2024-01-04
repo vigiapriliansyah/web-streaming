@@ -91,4 +91,29 @@ class Home extends BaseController
         ];
         return view('/home/contact', $data);
     }
+
+public function search()
+{
+    $searchKeyword = $this->request->getPost('search_keyword');
+
+    if (!empty($searchKeyword)) {
+        // Perform the search using the $searchKeyword
+        $searchResults = $this->animeModel->searchAnime($searchKeyword);
+
+        $data = [
+            'title' => 'Search Results | 5nime',
+            'searchResults' => $searchResults,
+            'searchKeyword' => $searchKeyword,
+        ];
+
+        return view('/home/search', $data); // Create a new view file for displaying search results
+    } else {
+        // Handle the case when the search keyword is empty
+        // Redirect or show an error message as needed
+        return redirect()->to('/');
+    }
+}
+
+
+
 }
