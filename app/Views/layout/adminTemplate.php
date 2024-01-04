@@ -200,7 +200,7 @@
 
             Swal.fire({
                 title: 'Anda yakin?',
-                text: 'Menghapus dataini',
+                text: 'Menghapus data ini',
                 icon: 'question',
                 showCancelButton: true,
                 colorConfirmButton: '#d33',
