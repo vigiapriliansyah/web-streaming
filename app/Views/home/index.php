@@ -8,17 +8,11 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
+            <?php foreach ($sliderData as $slide): ?>
             <div class="swiper-slide">
-                <img src="<?= base_url('assets/MV5BOGNjNzFhMGQtODc2MS00OGU0LThkN2UtODY1NmJmYWY0NmFiXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_.jpg') ?>"
-                    alt="" style="width: 100%;">
+                <img src="<?= base_url('streaming/anime/' . $slide['file_gambar']) ?>" alt="" style="width: 100%;">
             </div>
-            <div class="swiper-slide">
-                <img src="<?= base_url('assets/akira1.jpg') ?>" alt="" style="width: 100%; ">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= base_url('assets/hero.jpg') ?>" alt="" style="width: 100%;">
-            </div>
-            ...
+            <?php endforeach; ?>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -31,6 +25,7 @@
         <div class="swiper-scrollbar"></div>
     </div>
 </section>
+
 
 <!-- --main-- -->
 <main>

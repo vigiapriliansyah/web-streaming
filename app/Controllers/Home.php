@@ -23,10 +23,12 @@ class Home extends BaseController
     {
         $recentlyAddedAnime = $this->animeModel->getRecentlyAddedAnime();
         $animeTahun2023 = $this->animeModel->getAnimeByYear(2023, 5);
+        $sliderData = $this->animeModel->getSliderData();
 
         $data = [
             'recentlyAddedAnime' => $recentlyAddedAnime,
             'animeTahun2023' => $animeTahun2023,
+            'sliderData' => $sliderData,
             'title' => 'Home | 5nime',
         ];
 
