@@ -88,7 +88,7 @@ class animeModel extends Model
             ->getResult();
     }
 
-    public function getSliderData($limit = 3)
+    public function getSliderData($limit = 5)
     {
         return $this->select('file_gambar')->orderBy('created_at', 'DESC')->limit($limit)->findAll();
     }
