@@ -2,15 +2,12 @@
 <?= $this->section('konten'); ?>
 
 
-<!-- <div class="preloader flex-column justify-content-center align-items-center">
-  <img class="animation__wobble" src="<?= base_url('assets/dist/img/AdminLTELogo.png'); ?>" alt="AdminLTELogo" height="60" width="60">
-</div> -->
 
 <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="<?= base_url('/assets/admin.png'); ?>" class="img-circle elevation-2" alt="User Image">
+            <img src="<?= base_url('assets/admin.png'); ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
             <a href="#" class="d-block">Admin</a>
@@ -23,10 +20,18 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="/anime" id="sidebar-nav" class="nav-link">
+                <a href="/anime" id="sidebar-nav" class="nav-link ">
                     <i class="nav-icon fa fa-plus"></i>
                     <p>
                         Anime
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/genre" id="sidebar-nav" class="nav-link active">
+                    <i class="nav-icon fa fa-plus"></i>
+                    <p>
+                        Genre
                     </p>
                 </a>
             </li>
@@ -47,8 +52,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/anime">Anime</a></li>
-                        <li class="breadcrumb-item active">Tambah Konten</li>
+                        <li class="breadcrumb-item"><a href="/genre">Genre</a></li>
+                        <li class="breadcrumb-item active">Kelola Konten</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->

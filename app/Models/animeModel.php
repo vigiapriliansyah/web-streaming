@@ -41,7 +41,7 @@ class animeModel extends Model
 
     public function getRecentlyAddedAnime()
     {
-        return $this->orderBy('created_at', 'DESC') // Sesuaikan dengan kolom yang menyimpan waktu penambahan anime
+        return $this->orderBy('created_at', 'DESC')
             ->findAll();
     }
 
@@ -63,7 +63,6 @@ class animeModel extends Model
 
         $results = $this->findAll();
 
-        // Pastikan tidak melebihi batas yang diinginkan
         $rekomendasiRandom = array_slice($results, 0, $limit);
 
         return $rekomendasiRandom;
@@ -75,5 +74,17 @@ class animeModel extends Model
         $builder->like('judul', $keyword);
 
         return $builder->get()->getResultArray();
+    }
+
+    public function animePanelKonten()
+    {
+        return $this->db->table('tbl_anime a')
+            ->select('a.id_anime, a.judul, a.deskripsi, a.rating, a.tahun, GROUP_CONCAT(g.genre) AS genres, a.file_video, a.file_gambar')
+            ->join('detail_genre d', 'a.id_anime = d.id_anime')
+            ->join('tbl_genre g', 'd.id_genre = g.id_genre')
+            ->groupBy('a.id_anime')
+            ->orderBy('a.created_at', 'DESC')
+            ->get()
+            ->getResult();
     }
 }

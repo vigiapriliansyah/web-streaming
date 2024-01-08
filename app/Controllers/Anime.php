@@ -20,16 +20,10 @@ class Anime extends BaseController
 
     public function index()
     {
-        $builder = $this->animeModel->db->table('tbl_anime a');
-        $builder->select('a.id_anime, a.judul, a.deskripsi, a.rating, a.tahun, GROUP_CONCAT(g.genre) AS genres, a.file_video, a.file_gambar');
-        $builder->join('detail_genre d', 'a.id_anime = d.id_anime');
-        $builder->join('tbl_genre g', 'd.id_genre = g.id_genre');
-        $builder->groupBy('a.id_anime');
-
-        $result = $builder->get()->getResult();
+        $result = $this->animeModel->AnimePanelKonten();
 
         $data = [
-            'title' => 'Home | 5nime',
+            'title' => 'Panel Konten | 5nime',
             'anime' => $result,
             // Add other data as needed
         ];
@@ -107,7 +101,7 @@ class Anime extends BaseController
         $selectedGenreIds = $this->detailGenreModel->getGenreIdsByAnimeId($id_anime);
 
         $data = [
-            'title' => 'Edit | Dashboard',
+            'title' => 'Edit | Panel Konten',
             'anime' => $anime,
             'genre' => $genre,
             'selectedGenreIds' => $selectedGenreIds,
@@ -176,5 +170,9 @@ class Anime extends BaseController
     {
         $this->animeModel->delete_data($id_anime);
         return redirect()->to('anime');
+    }
+
+    public function genre()
+    {
     }
 }
