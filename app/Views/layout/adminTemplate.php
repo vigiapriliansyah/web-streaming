@@ -102,7 +102,7 @@
             <?= $this->renderSection('konten'); ?>
 
             <footer class="main-footer">
-                <strong>Copyright &copy; 2023.</strong>
+                <strong>Copyright &copy; 2024.</strong>
                 All rights reserved.
             </footer>
     </div>
