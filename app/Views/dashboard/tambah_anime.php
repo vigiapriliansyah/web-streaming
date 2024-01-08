@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/genre" id="sidebar-nav" class="nav-link active">
+                <a href="/genre" id="sidebar-nav" class="nav-link ">
                     <i class="nav-icon fa fa-plus"></i>
                     <p>
                         Genre

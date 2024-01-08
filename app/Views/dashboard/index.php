@@ -66,7 +66,9 @@
   <section class="content">
     <div class="container-fluid">
       <div class="card-body">
-        <a href="anime/tambah_anime" class="btn btn-info"><i class="nav-icon fa fa-plus"></i></a>
+        <div class="mt-2">
+          <a href="anime/tambah_anime" class="btn btn-info"><i class="nav-icon fa fa-plus"></i> Tambah Anime</a>
+        </div>
         <div class="mt-2">
           <table id="example2" class="table table-bordered table-hover">
             <thead>
