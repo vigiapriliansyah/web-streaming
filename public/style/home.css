@@ -2,7 +2,37 @@ body {
   background-color: #302c5b;
   color: #fff;
 }
+.over {
+  position: relative;
+  width: 100%;
+}
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.over:hover .overlay {
+  opacity: 1;
+}
+
+.col .card .overlay .text a {
+  color: #000;
+}
 .search-box {
   width: fit-content;
   height: fit-content;
@@ -97,7 +127,7 @@ section .swiper {
   margin-left: 60px;
   width: 251px;
 }
-.col-md-4 .col .card{
+.col-md-4 .col .card {
   margin-bottom: 2rem;
 }
 .col-sm-4 img {
