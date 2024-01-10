@@ -18,7 +18,7 @@ class Genre extends BaseController
     public function index()
     {
 
-        $genres = $this->genreModel->get_genre();
+        $genres = $this->genreModel->short_genre();
 
         $data = [
             'title' => 'Panel Konten | 5nime',
