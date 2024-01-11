@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1D1B34;">
         <div class="container-fluid">
             <div>
-                <a class="navbar-brand" href="/home"><img src="<?= base_url('/assets/icon.png'); ?>" alt="icon" width="55" height="40"></a>
+                <a class="navbar-brand" href="/home"><img src="<?= base_url('/assets/icon.png'); ?>" alt="icon" width="55" height="40" style="border-radius: 70%;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="/home">Home</a>
+                            <a class="nav-link" aria-current="page" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/home/animeList">Anime List</a>
@@ -48,14 +48,16 @@
                     <div class="navbar-icons">
                         <ul class="navbar-nav">
                             <li class="navbar-item">
-                                <div class="search-box">
-                                    <button class="btn-search">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
-                                            <path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                                        </svg>
-                                    </button>
-                                    <input type="text" class="input-search" placeholder="Cari Judul Anime....">
-                                </div>
+                                <form action="<?= base_url('home/search') ?>" method="post">
+                                    <div class="search-box">
+                                        <button type="submit" class="btn-search">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
+                                                <path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                            </svg>
+                                        </button>
+                                        <input type="text" name="search_keyword" class="input-search" placeholder="Cari Judul Anime....">
+                                    </div>
+                                </form>
                             </li>
                             <li class="nav-item" style="padding-top: 9px;">
                                 <a class="navbar-icon text-decoration-none text-white pt-3" href="/Anime"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -69,6 +71,7 @@
             </div>
         </div>
     </nav>
+
 
 
     <main role="main" class="container" style="margin-top: 90px;">

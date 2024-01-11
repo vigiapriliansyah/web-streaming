@@ -111,11 +111,7 @@
                 <span>Tentang 5NIME</span>
                 Kami menawarkan beberapa movie anime yang dapat kalian akses dengan mudah.
             </p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-youtube"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-            </div>
+
         </div>
     </footer>
 
