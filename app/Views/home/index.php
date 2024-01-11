@@ -8,10 +8,14 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
+            <?php $counter = 0; ?>
             <?php foreach ($sliderData as $slide) : ?>
-                <div class="swiper-slide">
-                    <a href="<?= base_url('streaming/' . $slide['id_anime']); ?>"><img src="<?= base_url('uploud/images/' . $slide['file_gambar']) ?>" alt="" style="width: 100%;"></a>
-                </div>
+                <?php if ($counter < 3) : ?>
+                    <div class="swiper-slide">
+                        <a href="<?= base_url('streaming/' . $slide['id_anime']); ?>"><img src="<?= base_url('uploud/images/' . $slide['file_gambar']) ?>" alt="" style="width: 100%;"></a>
+                    </div>
+                    <?php $counter++; ?>
+                <?php endif; ?>
             <?php endforeach; ?>
         </div>
         <div class="swiper-pagination"></div>
@@ -19,6 +23,7 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-scrollbar"></div>
     </div>
+
 </section>
 
 
@@ -32,16 +37,17 @@
                     <div class="row row-cols-1 row-cols-md-4 g-4">
                         <?php foreach ($recentlyAddedAnime as $anime) : ?>
                             <div class="col">
-                                <div class="card over">
-                                    <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>" class="card-img-top" alt="<?= $anime['judul']; ?>">
-                                    <div class="card-body overlay">
-                                        <h5 class="card-title"><?= $anime['judul']; ?></h5>
-                                        <div class="more text"><a href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">Watch
-                                                Movie</a>
-                                        </div>
+                                <a href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">
+                                    <div class="card over">
+                                        <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>" class="card-img-top" alt="<?= $anime['judul']; ?>">
+                                        <div class="card-body overlay">
+                                            <h5 class="card-title"><?= $anime['judul']; ?></h5>
+                                            <div class="more text">
+                                            </div>
 
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         <?php endforeach; ?>
                     </div>

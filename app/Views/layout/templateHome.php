@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= base_url('/font/css/all.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('/style/home.css'); ?>">
     <script src="<?= base_url('player/playerjs.js'); ?>" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -128,7 +129,6 @@
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
