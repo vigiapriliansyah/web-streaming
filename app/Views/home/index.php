@@ -37,7 +37,7 @@
                     <div class="row row-cols-1 row-cols-md-4 g-4">
                         <?php foreach ($recentlyAddedAnime as $anime) : ?>
                             <div class="col">
-                                <a href="<?= base_url('streaming/anime/' . $anime['id_anime']); ?>">
+                                <a href="<?= base_url('streaming/' . $anime['id_anime']); ?>">
                                     <div class="card over">
                                         <img src="<?= base_url('uploud/images/' . $anime['file_gambar']); ?>" class="card-img-top" alt="<?= $anime['judul']; ?>">
                                         <div class="card-body overlay">
